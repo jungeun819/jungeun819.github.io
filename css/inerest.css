@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#index {
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 3em;
+}
+#favorite {
+    font-size: 40px;
+    font-family: 'PyeongChangPeace-Bold', cursive;
+}
+#favorite:hover {
+    text-shadow: 5px 1px 1px #7aaec8;
+}
+#contents {
+    width: 100%;
+    height: 500px;
+    background-color: rgba(168, 216, 234, 0.536);
+    border-radius: 2em;
+    overflow: hidden;
+    text-align: center;
+}
+.slides {
+    position: absolute;
+    width: 2000px;
+    height: 300px;
+    left: 0;
+    top: 50px;
+    transition: left 0.5s ease-out;
+}
+.slides > li > img {
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    border-radius: 5%;
+    box-shadow: 5px -5px 5px black;
+}
+.slides > li > img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.slide_wrapper {
+    position: relative;
+    width: 960px;
+    height: 415px;
+    left: 15px;
+}
+.slides li{
+    float: left;
+    margin: 15px;
+}
+.controls {
+    margin: 30px;
+}
+.controls span{
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+.controls span:hover {
+    cursor: pointer;
+}
+
+/*  */
+.movie-contanier {
+    /* position: relative; */
+    position: absolute;
+    border: 1px solid darkgray;
+    width: 400px;
+    height: 550px;
+    top: 100px;
+    left: 550px;
+    border-style: none;
+    border-radius: 1.5em;
+    margin: 0 auto;
+    background-color: #ebeaf2;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+iframe {
+    border-radius: 1em;
+}
+.close-button {
+    position: absolute;
+    float: right;
+    width: 1.5rem;
+    top: 8px;
+    right: 15px;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    background-color: lightgray;
+   
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+label {
+    display: inline-block;
+    font-family: 'yg-jalnan', cursive;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 8px;
+}
+.show-modal {
+     opacity: 1;
+     visibility: visible;
+     transform: scale(1.0);
+     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

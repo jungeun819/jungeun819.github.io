@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KyoboHandwriting2020A';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/KyoboHandwriting2020A.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#contents {
+    width: 100%;
+    height: 500px;
+    background-color: #ddeef8;
+    overflow: hidden;
+    text-align: center;
+}
+.map-title {
+    font-size: 2.5em;
+    padding: 20px;
+    font-family: 'yg-jalnan', cursive;
+}
+.map-title:hover {
+    text-shadow: 5px 1px 1px #7aaec8;
+}
+#map-wrap {
+    position: relative;
+    padding: 10px;
+}
+#top-left, #top-right, #bottom-left, #bottom-right {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    transition-duration: .5s;
+}
+#top-left {
+    border: 1px solid #2f8380;
+    background-image: url("../images/지구1.png");
+    background-size: cover;
+    border-radius: 100% 0 0 0;
+}
+#top-right {
+    border: 1px solid #2f8380;
+    background-image: url("../images/지구2.png");
+    background-size: cover;
+    border-radius: 0 100% 0 0;
+}
+#bottom-left {
+    border: 1px solid #2f8380;
+    background-image: url("../images/지구3.png");
+    background-size: cover;
+    border-radius: 0 0 0 100%;
+}
+#bottom-right {
+    border: 1px solid #2f8380;
+    background-image: url("../images/지구4.png");
+    background-size: cover;
+    border-radius: 0 0 100% 0;
+}
+#top-left:hover, #top-right:hover, #bottom-left:hover, #bottom-right:hover {
+    transition-duration: .5s;
+    transform: scale(1.1);
+}
+.content-wrap {
+    position: absolute;
+    top: 130px;
+    height: 500px;
+}
+.postIt {
+    position: relative;
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 0 1.6em 0 0;
+    visibility: hidden;
+    opacity: 0;
+}
+.year {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 1.3em;
+    font-family: 'KyoboHandwriting2020A', cursive;
+}
+.content {
+    position: absolute;
+    background-color: aliceblue;
+    top: 55px;
+}
+.content > p {
+    font-size: 1.1em;
+    font-family: 'BMJUA', cursive;
+}
+.icon {
+    position: absolute;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+    top: 2px;
+} 
+#postIt1 {
+    position: absolute;
+    left: 50px;
+    transform: rotate(-10deg);
+    background-color: lightpink;
+}
+#postIt2 {
+    position: absolute;
+    left: 700px;
+    transform: rotate(7deg);
+    background-color: lightseagreen;
+}
+#postIt3 {
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+    transform: rotate(5deg);
+    background-color: lightgoldenrodyellow;
+}
+#postIt4 {
+    position: absolute;
+    left: 700px;
+    bottom: 0;
+    transform: rotate(-7deg);
+    background-color: lightgrey;
+}
+.show-postit {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Je Home</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="./index.html">
+                    <h1>JE HOME</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="./introduction.html">INTRODUCE</a></li>
+                    <li><a href="./interest.html">INTEREST</a></li>
+                    <li><a href="./roadmap.html">ROADMAP</a></li>
+                    <li><p class="trigger">LOGIN</p></li>
+                </ul>
+            </nav>
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1 class="title">로그인</h1>
+                <form action="login" class="login">
+                    <input type="text" name="id" placeholder="아이디" required>
+                    <label></label>
+                    <input type="password" name="password" placeholder="비밀번호" required></textarea>
+                    <input type="submit" id="submit" value="로그인">
+                    <input type="button" id="cancel" value="취소">
+                    <label></label>
+                    <a href="./join.html" id="join">회원가입</a>
+                </form>
+            </div>
+        </header>
+        <section class="screen">
+            <div class="sentence">
+              <span>welecome</span>
+              <span>to my</span>
+              <span>homepage</span>
+            </div>
+        </section>
+        <div id="contents">
+           <div id="composition">
+                <ul>
+                    <li>
+                        <a href="./introduction.html">
+                            <span id="icon1" class="icon"></span>
+                            <p>INTRODUCE</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./interest.html">
+                            <span id="icon2" class="icon"></span>
+                            <p>INTEREST</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./roadmap.html">
+                            <span id="icon3" class="icon"></span>
+                            <p>ROADMAP</p>
+                        </a>
+                    </li>
+                </ul>
+           </div>
+        <footer>
+            <div class="etc">
+                <a href="https://github.com/jungeun819?tab=repositories">
+                    <img src="./images/github.png" alt="github" class="icons">
+                </a>
+                <a href="#">
+                    <img src="./images/notion.png" alt="notion" class="icons">
+                </a>
+                <a href="https://www.youtube.com/channel/UCWO30Jj3ZWKqrDut1r5oK-Q">
+                    <img src="./images/youtube.png" alt="youtube" class="icons">
+                </a>
+                <p>서정은 jungeuns2022@gmail.com</p>
+                <br>
+            </div>
+        </footer>
+    </div>
+   <script src="./js/common.js"></script>
+</body>
+</html>

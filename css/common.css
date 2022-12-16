@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    /* text-align: center; */
+    padding: 0;
+    box-sizing: border-box;
+}
+#container {
+    margin: 0 auto;
+    width: 1024px;
+    background-color: #ddeef8;
+    border: 10px solid #7aaec8;
+    border-radius: 1em;
+}
+/* header 영역 */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #F7C9D6;
+}
+#logo {
+    float: left;
+    width: 150px;
+    height: 100px;
+    background-color: #F7C9D6;
+    line-height: 100px; /* 중간으로 */
+    font-family: 'CWDangamAsac-Bold', cursive;
+}
+#logo h1 {
+    width: 200px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2f8380;
+    text-align: center;
+    text-shadow: 1px -3px 1px #222;
+}
+nav {
+    float: right;
+    width: 350px;
+    height: 100%;
+    background-color: #83c6d7;
+}
+#topMenu {
+    height: 50px;
+}
+#topMenu > li {
+    float: left;
+    position: relative; 
+    top: 40px;
+}
+#topMenu > li > a, #topMenu > li > p {
+    display: block;
+    color: dimgrey;
+    font-size: 600;
+    font-family: 'twayair', cursive;
+    padding: 15px 10px 0 5px; /* top left bottom right 순서 */
+}
+#topMenu > li > a:hover, #topMenu > li > p:hover {
+    color: #000;
+    text-shadow: 0 -1px #07c;;
+}
+#topMenu > li > ul {
+    display: none;
+    position: absolute;
+    width: 100px;
+    left: 0;
+    margin: 0;
+}
+#topMenu > li > ul > li {
+    padding: 5px;
+}
+#topMenu > li > ul > li > a {
+    font-size: 10px;
+    padding: 10px;
+    color: #000;
+}
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10;
+}
+a{
+text-decoration: none; /* 텍스트 링크 밑줄 감추기 */
+}
+ul {
+    list-style: none;
+}
+li {
+    list-style: none;
+}
+.trigger {
+    cursor: pointer;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #83c6d7;
+}
+.etc {
+    width: 500px;
+    font-family: "twayair", cursive;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+.icons {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+/* 로그인 창 */
+.modal-content {
+    /* position: absolute; */
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    height: 300px;
+    top: 140px;
+    left: 33%;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    border-radius: 3%;
+    background-color: white;
+}
+.title {
+    font-family: 'twayair', sans-serif;
+    font-size: 30px;
+    color: #216182;
+    margin: 0 auto;
+    padding: 15px;
+}
+.login {
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    top: 70px;
+}
+.login > input {
+    width: 300px;
+    height: 38px;
+    color: #3a3a3a;
+    font-size: 0.9em;
+    padding: 5px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    background-color: #efefef;
+}
+.login > input:not([name="password"]){
+    font-family: 'twayair', cursive;
+}
+input:focus {
+    border: 1px solid #97d6eb;
+}
+#submit, #cancel{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-family: 'twayair', cursive;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#join {
+    width: 300px;
+    height: 38px;
+    font-family: 'twayair', cursive;
+    background-color: #efefef;
+    border-style: none;
+}
+#submit:hover, #cancel:hover, #join:hover {
+    color: #fff;
+    background-color: #216282;
+    opacity: 0.9;
+}
+.close-button {
+    float: right;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+.close-button:hover {
+    background-color: darkgray;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+}
+label {
+    display: block;
+    margin-top: 20px;
+}

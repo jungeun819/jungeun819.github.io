@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="./index.html">
+                    <h1>JE HOME</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="./introduction.html">INTRODUCE</a></li>
+                    <li><a href="./interest.html">INTEREST</a></li>
+                    <li><a href="./roadmap.html">ROADMAP</a></li>
+                    <li><p class="trigger">LOGIN</p></li>
+                </ul>
+            </nav>
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1 class="title">로그인</h1>
+                <form action="login" class="login">
+                    <input type="text" name="id" placeholder="아이디" required>
+                    <label></label>
+                    <input type="password" name="password" placeholder="비밀번호" required></textarea>
+                    <input type="submit" id="submit" value="로그인">
+                    <input type="button" id="cancel" value="취소">
+                    <label></label>
+                    <a href="./join.html" id="join">회원가입</a>
+                </form>
+            </div>
+        </header>
+        <div id="contents">
+            <span class="listBtn"><a href="./memberList.html">ㅤ</a></span>
+            <div id="title">회원가입</div>
+            <form action="javascript:saveMember()" name="join">
+                <fieldset>
+                    <label for="userId">아이디</label>
+                    <input type="email" name="userId" id="userId" placeholder="@를 포함한 이메일을 입력해주세요" required>
+                    <label for="pwd">비밀번호</label>
+                    <input type="password" name="pwd" id="pwd" placeholder="특수문자(!@#&)포함/숫자포함/영소문자 8~14자리" required>
+                    <label for="confmPwd">비밀번호 재확인</label>
+                    <input type="password" name="confmPwd" id="confmPwd" placeholder="특수문자(!@#&)포함/숫자포함/영소문자 8~14자리" required>
+                    <label for="userName">이름</label>
+                    <input type="text" name="userName" id="userName" placeholder="한글만 입력해주세요" required>
+                    <label for="birthday">생년월일</label>
+                    <input type="date" name="birthday" id="birthday" required>
+                    <label for="gender">성별</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">성별</option>
+                        <option value="f">여자</option>
+                        <option value="m">남자</option>
+                    </select>
+                    <label for="tel">전화번호</label>
+                    <input type="text" name="tel" id="tel1" class="phone" required>-
+                    <input type="text" name="tel" id="tel2" class="phone" required>-
+                    <input type="text" name="tel" id="tel3" class="phone" required>
+                    <label></label>
+                    <div class="btn">
+                        <input type="submit" value="가입하기" id="singUp">
+                        <input type="reset" value="초기화" id="reset">
+                    </div>
+                </fieldset>
+            </form>
+            <!-- <div id="list">
+                <table class="memberList">
+                    <thead class="listName">
+                        <th colspan="6">회원 목록</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>No</th>
+                            <th>아이디</th>
+                            <th>이름</th>
+                            <th>생년월일</th>
+                            <th>성별</th>
+                            <th>전화번호</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+        </div>
+        <footer>
+            <div class="etc">
+                <a href="https://github.com/jungeun819?tab=repositories">
+                    <img src="./images/github.png" alt="github" class="icons">
+                </a>
+                <a href="#">
+                    <img src="./images/notion.png" alt="notion" class="icons">
+                </a>
+                <a href="https://www.youtube.com/channel/UCWO30Jj3ZWKqrDut1r5oK-Q">
+                    <img src="./images/youtube.png" alt="youtube" class="icons">
+                </a>
+                <p>서정은 jungeuns2022@gmail.com</p>
+                <br>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/join.js"></script>
+</body>
+</html>

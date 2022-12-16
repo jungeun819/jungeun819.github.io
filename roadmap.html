@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roadmap</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/roadmap.css">
+    
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="./index.html">
+                    <h1>JE HOME</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="./introduction.html">INTRODUCE</a></li>
+                    <li><a href="./interest.html">INTEREST</a></li>
+                    <li><a href="./roadmap.html">ROADMAP</a></li>
+                    <li><p class="trigger">LOGIN</p></li>
+                </ul>
+            </nav>
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1 class="title">로그인</h1>
+                <form action="login" class="login">
+                    <input type="text" name="id" placeholder="아이디" required>
+                    <label></label>
+                    <input type="password" name="password" placeholder="비밀번호" required></textarea>
+                    <input type="submit" id="submit" value="로그인">
+                    <input type="button" id="cancel" value="취소">
+                    <label></label>
+                    <a href="./join.html" id="join">회원가입</a>
+                </form>
+            </div>
+        </header>
+        <div id="contents">
+            <h2 class="map-title">ROADMAP</h2>
+            <div id="map-wrap">
+                <div id="top-left" class="trig"></div>
+                <div id="top-right" class="trig"></div>
+                <div id="etc"></div>
+                <div id="bottom-left" class="trig"></div>
+                <div id="bottom-right" class="trig"></div>
+            </div>
+            <div class="content-wrap">
+                <div class="postIt" id="postIt1">
+                    <img src="./images/study.png" alt="" class="icon">
+                    <br>
+                    <div class="content">
+                        <span class="year">2022년</span>
+                        <br>
+                        <p class="subheading">첫걸음</p>
+                        <p>자바(JAVA)기반 공공데이터 융합 개발자 양성과정을 수강중
+                            <br>다양한 프로그램 언어를 접하며 차근차근 공부 중입니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="postIt" id="postIt2">
+                    <img src="./images/시작.png" alt="" class="icon">
+                    <br>
+                    <div class="content">
+                        <span class="year">2023년</span>
+                        <br>
+                        <p class="subheading">시작</p>
+                        <p>실무에 들어가서 자바를 심도 있게 공부하고 싶습니다.
+                            <br>아니면 실무에서 사용하는 언어를 깊게 공부해 보고 싶습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="postIt" id="postIt3">
+                    <img src="./images/포트폴리오.png" alt="" class="icon">
+                    <br>
+                    <div class="content">
+                        <span class="year">2025년</span>
+                        <br>
+                        <p class="subheading">발전</p>
+                        <p>나만의 포트폴리오를 열심히 만들고 싶습니다.
+                            <br>공부를 게을리하지 않고, 도움이 되는 동료가 되고 싶습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="postIt" id="postIt4">
+                    <img src="./images/앱.png" alt="" class="icon">
+                    <br>
+                    <div class="content">
+                        <span class="year">2032년</span>
+                        <br>
+                        <p class="subheading">도전</p>
+                        <p>친구들과 함께 사용할 수 있는 교환일기 같은 앱을 만들고 싶습니다.
+                            <br>다양한 실무경험을 바탕으로 더욱 나아가겠습니다!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="etc">
+                <a href="https://github.com/jungeun819?tab=repositories">
+                    <img src="./images/github.png" alt="github" class="icons">
+                </a>
+                <a href="#">
+                    <img src="./images/notion.png" alt="notion" class="icons">
+                </a>
+                <a href="https://www.youtube.com/channel/UCWO30Jj3ZWKqrDut1r5oK-Q">
+                    <img src="./images/youtube.png" alt="youtube" class="icons">
+                </a>
+                <p>서정은 jungeuns2022@gmail.com</p>
+                <br>
+            </div>
+        </footer>
+    </div> <!-- container -->
+    <script src="./js/common.js"></script>
+    <script src="./js/post-it.js"></script>
+</body>
+</html>

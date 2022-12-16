@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memberList</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/memberList.css">
+    <script>
+        window.addEventListener('load', () => {
+            renderMember();
+    });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <h1>JE HOME</h1>
+                </a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="./introduction.html">INTRODUCE</a></li>
+                    <li><a href="./interest.html">INTEREST</a></li>
+                    <li><a href="./roadmap.html">ROADMAP</a></li>
+                    <li><p class="trigger">LOGIN</p></li>
+                </ul>
+            </nav>
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1 class="title">로그인</h1>
+                <form action="login" class="login">
+                    <input type="text" name="id" placeholder="아이디" required>
+                    <label></label>
+                    <input type="password" name="password" placeholder="비밀번호" required></textarea>
+                    <input type="submit" id="submit" value="로그인">
+                    <input type="button" id="cancel" value="취소">
+                    <label></label>
+                    <a href="./join.html" id="join">회원가입</a>
+                </form>
+            </div>
+        </header>
+        <div id="contents">
+            <div id="list">
+                <table class="memberList">
+                    <thead class="listName">
+                        <th colspan="6">회원 목록</th>
+                        <tr>
+                            <th>No</th>
+                            <th>아이디</th>
+                            <th>이름</th>
+                            <th>생년월일</th>
+                            <th>성별</th>
+                            <th>전화번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div class="etc">
+                <a href="https://github.com/jungeun819?tab=repositories">
+                    <img src="./images/github.png" alt="github" class="icons">
+                </a>
+                <a href="#">
+                    <img src="./images/notion.png" alt="notion" class="icons">
+                </a>
+                <a href="https://www.youtube.com/channel/UCWO30Jj3ZWKqrDut1r5oK-Q">
+                    <img src="./images/youtube.png" alt="youtube" class="icons">
+                </a>
+                <p>서정은 jungeuns2022@gmail.com</p>
+                <br>
+            </div>
+        </footer>
+    </div>
+    <script>
+    const renderMember = (members = JSON.parse(localStorage.getItem('members'))) => {
+        const tbody = document.querySelector(".memberList tbody");
+        tbody.innerHTML = "";
+
+        members?.reverse();
+
+        if(members){
+            members.forEach(({userId, userName, birthday, gender, phone}, index) => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${userId}</td>
+                    <td>${userName}</td>
+                    <td>${birthday}</td>
+                    <td>${gender}</td>
+                    <td>${phone}</td>
+                </tr>`; 
+            });
+        }
+        else {
+            tbody.innerHTML = `<tr><td colspan="6" style="text-align: center;">회원이 없습니다.</td></tr>`;
+        }
+    }
+    </script>
+    <script src="./js/common.js"></script>
+</body>
+</html>
